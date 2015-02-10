@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  German
+ * @package   German_LocalePack
+ * @authors   MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @developer MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <German_LocalePackMx>
+            <version>0.1.0</version>
+            <locale>es_MX</locale>
+            <title>Spanish (Mexico) Language Pack</title>
+            <link_git>https://github.com/MaWoScha/German_LocalePack_es_MX</link_git>
+            <link_mage></link_mage>
+        </German_LocalePackMx>
+    </modules>
+
+    <global>
+        <models>
+            <localepackmx>
+                <class>German_LocalePackMx_Model</class>
+            </localepackmx>
+        </models>
+        <helpers>
+            <localepackmx>
+                <class>German_LocalePackMx_Helper</class>
+            </localepackmx>
+        </helpers>
+        <blocks>
+            <localepackmx>
+                <class>German_LocalePackMx_Block</class>
+            </localepackmx>
+        </blocks>
+        <events>
+            <adminhtml_controller_action_predispatch_start>
+                <observers>
+                    <localepackmx>
+                        <class>localepackmx/observer</class>
+                        <method>adminhtmlControllerActionPredispatchStart</method>
+                    </localepackmx>
+                </observers>
+            </adminhtml_controller_action_predispatch_start>
+        </events>
+    </global>
+	
+    <default>
+        <localepackmx>
+             <notification>
+                <url>https://github.com/MaWoScha/German_LocalePack_es_MX</url>
+            </notification>
+        </localepackmx>
+        <magesetup>
+            <default_country>MX</default_country>
+        </magesetup>
+    </default>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <localepackmx>
+                    <files>
+                    	<default>localepackmx.xml</default>
+                    </files>
+                </localepackmx>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <German_LocalePackMx>
+                    <files>
+                        <localepackmx>German_LocaleMx.csv</localepackmx>
+                        <default>German_LocaleEs.csv</default>
+                    </files>
+                </German_LocalePackMx>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children> <!--
+                                        <localepacks translate="title" module="localepackmx">
+                                            <title>Language Packs</title>
+                                    		<children> -->
+                                        		<localepackmx translate="title" module="localepackmx">
+                                            		<title>Spanish (Mexico) Language Pack</title>
+                                        		</localepackmx> <!--
+                                    		</children>
+                                        </localepacks> -->
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+</config>

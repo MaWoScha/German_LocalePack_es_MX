@@ -1,0 +1,28 @@
+#BackendModule
+app/code/community/German/LocalePackMx                        app/code/community/German/LocalePackMx
+app/etc/modules/German_LocalePackMx.xml                       app/etc/modules/German_LocalePackMx.xml
+
+
+#Downloader
+
+
+#Misc
+
+
+#TinyMCE
+
+
+#LocalePack Translation
+app/locale/de_DE/German_LocaleMx.csv app/locale/de_DE/German_LocaleMx.csv
+app/locale/es_MX/German_LocaleMx.csv app/locale/es_MX/German_LocaleMx.csv
+app/locale/es_ES/German_LocaleMx.csv app/locale/es_ES/German_LocaleMx.csv
+app/locale/pt_BR/German_LocaleMx.csv app/locale/pt_BR/German_LocaleMx.csv
+
+#Adminhtml und Default Theme
+
+#CoreTranslation
+
+
+
+# Clear the cache
+#@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
